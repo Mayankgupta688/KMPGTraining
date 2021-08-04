@@ -1,0 +1,23 @@
+<h1 id="myHeader" class="header">This is Angular Session</h1>
+
+<h2>Welcome to TechnoFunnel</h2>
+
+<h3>User Name is {{getUserDetails().userName}}</h3>
+<h4>User Age is {{getUserDetails().userAge}}</h4>
+<h4>User Designation is {{getUserDetails().userDesignation + " Senior"}}</h4>
+
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <input type="button" (click)="updateUserName()" value="Click To Update" />
+
+  
+  <application-other-component></application-other-component>
+  <application-other-component></application-other-component>
+  <application-other-component></application-other-component>

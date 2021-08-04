@@ -1,0 +1,17 @@
+{
+  "name": "packageadding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "rxjs": "6.6.0",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.11.3"
+  }
+}
