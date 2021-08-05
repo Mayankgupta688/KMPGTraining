@@ -1,0 +1,19 @@
+<div class="container_class">
+  <b>Filter Data</b><input type="text" [(ngModel)]="filterText" />
+  <input type="button" (click)="getFilterText()" value="Get Value" />
+  <input type="button" (click)="setFilterText()" value="Set Value" />
+
+  <div>
+      <div *ngFor="let employee of employeeList" style="display: inline-block; padding: 5px; margin: 5px; width: 25rem;">
+        <div class="card">
+          <img src="{{employee.avatar}}" class="card-img-top" [alt]="employee.name" [title]="employee.name">
+          <div class="card-body">
+            <h5 class="card-title">{{employee.name | uppercase}}</h5>
+            <h4>Earning value: {{employee.salary | currency: "INR"}}</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <input [id]="employee.id" type="button" value="Delete" (click)="deleteEmployeeByEvent($event)" />
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div>
+    <div *ngFor="let employee of employeeList; let count=index; let otherCount=index">
+        <div [ngClass]="{'odd-class': count % 2 == 1, 'even-class': count % 2 == 0}">
+
+            <img title="{{employee.name}}" [src]="employee.avatar" /><br/>
+
+            <b class="{{employee.name == 'Mayank' ? 'error-user': 'normal-user'}}">Employee Name {{employee.name}}</b><br/>
+            <b>Employee id {{employee.id}} : {{otherCount}} </b><br/>
+
+            <b [class]="employee.salary < 1200 ? 'error-user': 'normal-user'">Employee Salary {{employee.salary}}</b><br/>
+
+            <b [class.normalUser]="employee.salary < 1200">Normal User in Green</b>
+        </div>
+    </div><br/>
+</div>
