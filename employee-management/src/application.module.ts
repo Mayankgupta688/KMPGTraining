@@ -5,18 +5,16 @@ import  { EmployeeList } from "./components/employeeList/employeeList.component"
 import { EmployeeDetails } from "./components/employeeDetails/employeeDetails.component";
 import { EmployeeListing } from "./components/employeeListing/employeeListing.component";
 import { FormsModule } from "@angular/forms";
-
-@Component({
-    selector: "application-other-component",
-    template: "<h2>Hi Everyone</h2>"
-})
-export class EmployeeDetailsOther {}
+import { EmployeeLoginDetailsComponent } from './components/employee-login-details/employee-login-details.component';
+import { EmployeeSearchDetailsComponent } from './components/employee-search-details/employee-search-details.component';
+import { StockInformationComponent } from './app/stock-information/stock-information.component';
+import { StockDetailComponent } from './app/stock-detail/stock-detail.component';
 
 
 @NgModule({
-    declarations: [ EmployeeDetails, EmployeeDetailsOther, EmployeeList, EmployeeListing ],
+    declarations: [ EmployeeDetails, EmployeeList, EmployeeListing, EmployeeLoginDetailsComponent, EmployeeSearchDetailsComponent, StockInformationComponent, StockDetailComponent ],
     imports: [ BrowserModule, FormsModule ],
-    bootstrap: [ EmployeeListing ]
+    bootstrap: [ StockInformationComponent ]
 })
 export class ApplicationModule {}
 
