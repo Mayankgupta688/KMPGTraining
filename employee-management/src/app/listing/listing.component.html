@@ -1,0 +1,28 @@
+<div class="emp-container" *delayUpdate="5000">
+    <h1>Enter New Employee Details:</h1>
+
+    <b name="userName" style="width: 300px; display: inline-block; padding: 5px;;">Enter Name</b>
+    <input [(ngModel)]="userName" type="text" /><br/>
+    <b name="userId" style="width: 300px; display: inline-block; padding: 5px;;">Enter Id</b>
+    <input [(ngModel)]="userId" type="number" /><br/>
+    <b name="userAvatar" style="width: 300px; display: inline-block; padding: 5px;;">Enter Avatar</b>
+    <input [(ngModel)]="userAvatar" type="text" /><br/>
+    <b name="userCreatedAt" style="width: 300px; display: inline-block; padding: 5px;;">Enter Created At</b>
+    <input [(ngModel)]="userCreatedAt" type="date" /><br/>
+    <input type="button" applyBackground (click)="addEmployee()" value="Add Employee" />
+</div><br/><br/>
+
+<div>
+    <div *delayUpdate="5000">
+        <p>This is Para</p>
+        <div *delayUpdate="5000">
+            <h1>This is the Employee List</h1>
+            <h2>Look if you can find appropriate Match...</h2>
+        </div>
+    </div>
+</div>
+
+<div class="emp-container" *ngFor="let employee of employeeList">
+    <b>Employee Name is: {{employee.name}}</b><br/>
+    <input type="button" (click)="deleteEmployee(employee.id)" value="Delete {{employee.name}}" /><hr/><br/>
+</div>
