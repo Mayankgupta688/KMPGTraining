@@ -1,0 +1,4 @@
+<div class="component_container">
+    <input type="text" [(ngModel)]="textInput" /><br/>
+    <label>The Transformed Value is: {{textInput | convertSpacesToUnderscore : "," : "_" }}</label>
+</div>

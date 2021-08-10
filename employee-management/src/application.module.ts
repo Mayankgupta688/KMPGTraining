@@ -14,6 +14,13 @@ import { StockDetailComponent } from './app/stock-detail/stock-detail.component'
 import { ListingComponent } from './app/listing/listing.component';
 import { ApplyColorDirective } from "./directives/apply-color.directive";
 import { DelayUpdateDirective } from "./directives/delayUpdate.directive";
+import { StringModifierPipe } from "./pipes/string-modifier.pipes";
+import { TransformationComponent } from './app/transformation/transformation.component';
+import { FilterDataComponent } from './app/filter-data/filter-data.component';
+import { ListFilteringPipe } from "./pipes/list-filtering.pipes";
+import { ModelBindingComponent } from './app/model-binding/model-binding.component';
+import { EventEmitterComponent } from './app/event-emitter/event-emitter.component';
+import { EventEmitterReplierComponent } from './app/event-emitter-replier/event-emitter-replier.component';
 
 
 @NgModule({
@@ -27,10 +34,17 @@ import { DelayUpdateDirective } from "./directives/delayUpdate.directive";
         StockDetailComponent, 
         ListingComponent,
         ApplyColorDirective,
-        DelayUpdateDirective
+        DelayUpdateDirective,
+        StringModifierPipe,
+        TransformationComponent,
+        FilterDataComponent,
+        ListFilteringPipe,
+        ModelBindingComponent,
+        EventEmitterComponent,
+        EventEmitterReplierComponent
     ],
     imports: [ BrowserModule, FormsModule, HttpClientModule ],
-    bootstrap: [ ListingComponent ]
+    bootstrap: [ EventEmitterComponent, EventEmitterReplierComponent ]
 })
 export class ApplicationModule {}
 

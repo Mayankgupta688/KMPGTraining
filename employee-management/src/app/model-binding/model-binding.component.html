@@ -1,0 +1,10 @@
+<div class="class-container">
+
+    <div>
+        <b>Filter Users </b><input type="text" [(ngModel)]="filterText" (ngModelChange)="inputChange($event)" />
+    </div><br/><hr/>
+
+    <div *ngFor="let employee of filteredEmployeeList">
+        <b>Employee Name is {{employee.name}}</b><hr/><br/>
+    </div>
+</div>

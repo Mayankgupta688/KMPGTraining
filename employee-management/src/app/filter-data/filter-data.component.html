@@ -1,0 +1,14 @@
+<div class="class-container">
+
+    <div>
+        <b>Filter Users </b><input type="text" [(ngModel)]="filterText" />
+    </div><br/><hr/>
+
+    <div *ngFor="let employee of jsonDataFiltered">
+        <b>Employee Name is {{employee.name}}</b><hr/><br/>
+    </div><br/><br/><br/>
+
+    <!-- <div *ngFor="let employee of (jsonDataFiltered | listFilter : filterText : 'abc')">
+        <b>Employee Name is {{employee.name}}</b><hr/><br/>
+    </div> -->
+</div>
