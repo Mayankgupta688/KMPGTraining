@@ -1,0 +1,3 @@
+<input type="text" placeholder="Enter Name" #userNameReference [(ngModel)]="userAge"/>
+<input type="text" placeholder="Enter Age" [(ngModel)]="userAge" />
+<input type="button" (click)="getValue(userNameReference.value)" value="Send Data" /><br/><br/><hr/>

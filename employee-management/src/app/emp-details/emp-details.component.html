@@ -1,0 +1,6 @@
+<ng-container>
+    <b [style.color]="styleProperty.color">Employee Name for {{userNameData}} Company: {{employeedetails.name}}</b><br/><br/>
+    <b>Employee Id: {{employeedetails.id}}</b><br/><br/>
+    <b>Employee avatar: {{employeedetails.avatar}}</b><br/><br/>
+    <input type="button" (click)="deleteData(employeedetails.id)"  value="Delete {{employeedetails.name}}" /><hr/>
+</ng-container>

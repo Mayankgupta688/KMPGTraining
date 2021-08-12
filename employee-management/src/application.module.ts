@@ -21,7 +21,12 @@ import { ListFilteringPipe } from "./pipes/list-filtering.pipes";
 import { ModelBindingComponent } from './app/model-binding/model-binding.component';
 import { EventEmitterComponent } from './app/event-emitter/event-emitter.component';
 import { EventEmitterReplierComponent } from './app/event-emitter-replier/event-emitter-replier.component';
-
+import { EmpListComponent } from './app/emp-list/emp-list.component';
+import { EmpFilterComponent } from './app/emp-filter/emp-filter.component';
+import { EmpDetailsComponent } from './app/emp-details/emp-details.component';
+import {  ViewPropertiesComponent } from './app/view-properties/view-properties.component';
+import { ChildComponent, ParentControlComponent } from './app/parent-control/parent-control.component';
+import { ContentComponentComponent } from './app/content-component/content-component.component';     
 
 @NgModule({
     declarations: [ 
@@ -41,10 +46,17 @@ import { EventEmitterReplierComponent } from './app/event-emitter-replier/event-
         ListFilteringPipe,
         ModelBindingComponent,
         EventEmitterComponent,
-        EventEmitterReplierComponent
+        EventEmitterReplierComponent,
+        EmpListComponent,
+        EmpFilterComponent,
+        EmpDetailsComponent,
+        ViewPropertiesComponent,
+        ParentControlComponent,
+        ChildComponent,
+        ContentComponentComponent
     ],
     imports: [ BrowserModule, FormsModule, HttpClientModule ],
-    bootstrap: [ EventEmitterComponent, EventEmitterReplierComponent ]
+    bootstrap: [ EmpListComponent ]
 })
 export class ApplicationModule {}
 

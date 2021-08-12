@@ -1,0 +1,13 @@
+<ng-container>
+    <h1>Employee List is Given Below</h1>
+    <ng-container *ngFor="let employee of filterEmpList">
+        <ng-container *ngIf="employee.id % 2 == 0">
+            <emp-details 
+                [employeedetails]="employee" 
+                [userNameData]="userName" 
+                [styleProperty]="styleProperty"
+                (raiseDeletionEvent)="deleteEmployeeFromList($event)">
+            </emp-details>
+        </ng-container>
+    </ng-container>
+</ng-container>
