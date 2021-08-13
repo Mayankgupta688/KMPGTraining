@@ -13,39 +13,18 @@ import { ReactiveComponent } from './reactive/reactive.component';
 import { DataService } from "src/services/data.service";
 import { AuthService } from "src/services/auth.service";
 import { SubjectInfoComponent } from './subject-info/subject-info.component';
+import { TestingComponent } from './testing/testing.component';
 
 
 @NgModule({
-    declarations: [ SinglePageComponent, HomePageComponent, HelpPageComponent, AboutPageComponent, AddEmployeeComponent, ReactiveComponent, SubjectInfoComponent ],
+    declarations: [ SinglePageComponent, HomePageComponent, HelpPageComponent, AboutPageComponent, AddEmployeeComponent, ReactiveComponent, SubjectInfoComponent, TestingComponent ],
     imports: [
         BrowserModule, 
         HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
-        RouterModule.forRoot([
-            {   
-                path: "", 
-                component: HomePageComponent,
-                resolve: {
-                    employees: DataService,
-
-                }
-            },
-            { 
-                path: "help", 
-                component: HelpPageComponent, 
-                canActivate: [DataService]
-            },
-            { path: "about", component: AboutPageComponent},
-            { path: "addemployee", component: AddEmployeeComponent},
-            { path: "details/:empid/:empname", component: DetailsComponent},
-            { path: "addreactive", component: ReactiveComponent},
-            { path: "**", component: ReactiveComponent},
-        ])
+       
     ],
-    providers: [{
-        provide: HTTP_INTERCEPTORS, useClass: AuthService, multi: true
-    }],
-    bootstrap: [ SubjectInfoComponent ]
+    bootstrap: [ ReactiveComponent ]
 })
 export class AppModule { }
