@@ -6,7 +6,12 @@
         <a [routerLink]="['']">Home</a>
         <a [routerLink]='["help"]'>Help</a>
         <a [routerLink]='["about"]'>About</a>
+        <a [routerLink]='["addreactive"]'>Reactive</a>
     </nav><br/><br/><hr/>
+
+    <div>
+        <input type="button" value="Add Employee" (click)="redirectToAddEmployee()" />
+    </div><br/><br/>
 
     <router-outlet></router-outlet>
 

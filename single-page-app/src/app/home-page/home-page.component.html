@@ -1,5 +1,12 @@
+<br/><br/>
+
+<input type="text" placeholder="Enter Name" [(ngModel)]="userName" /><br/><br/>
+<input type="text" placeholder="Enter Password" [(ngModel)]="userPassword" /><br/><br/>
+<input type="button" value="Validate User" (click)="validateUserData()" /><br/><br/>
+
 <ng-container *ngFor="let employee of employeeList">
     <b>Employee Name is: {{employee.name}}</b><br/>
     <b>Employee Id is: {{employee.id}}</b><br/>
-    <b>Employee CreatedAt is: {{employee.createdAt}}</b><br/><hr/>
+    <b>Employee CreatedAt is: {{employee.createdAt}}</b><br/>
+    <input type="button" value="View Details" (click)="getViewEmployee(employee.id, employee.name)" /><hr/>
 </ng-container>

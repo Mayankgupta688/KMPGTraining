@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from "../../services/data.service";
 @Component({
   selector: 'app-home-page',
@@ -8,13 +9,26 @@ import { DataService } from "../../services/data.service";
 })
 export class HomePageComponent implements OnInit {
   employeeList: any = [];
-  constructor(private _dataService: DataService) { }
+  userName: string;
+  userPassword: string;
+  
+  constructor(private _dataService: DataService, private _router: Router, private _route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this._dataService.getEmployeeData().subscribe((data) => {
-      this.employeeList = data;
-      this._dataService.employeeListMaster = data;
+    debugger;
+    console.dir(this._route);
+    this._route.data.subscribe((response) => {
+      this.employeeList = response.employees;
     })
+  }
+
+  getViewEmployee(empId, empName) {
+    this._router.navigate(["details", empId, empName])
+  }
+
+  validateUserData() {
+    debugger;
+    this._dataService.validateUser(this.userName, this.userPassword)
   }
 
 }
